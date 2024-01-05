@@ -103,7 +103,7 @@ export default function ProfileEdit() {
         accountname: userId,
         intro: userIntro,
 
-        image: firstProfileImg || `https://mandarin.api.weniv.co.kr/${profileImg[0]}` || '',
+        image: firstProfileImg || `https://api.mandarin.weniv.co.kr/${profileImg[0]}` || '',
       };
       const res = await pushProfile(user);
 
@@ -129,7 +129,7 @@ export default function ProfileEdit() {
           <ProfileImg
             userName={userName}
             stateFunc={uploadSingleFile}
-            response={profileImg[0] ? [`https://mandarin.api.weniv.co.kr/${response[0]}`] : []}
+            response={profileImg[0] ? [`https://api.mandarin.weniv.co.kr/${response[0]}`] : []}
             firstImg={firstProfileImg}
           />
         </InpImg>

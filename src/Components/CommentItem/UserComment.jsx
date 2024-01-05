@@ -8,7 +8,6 @@ import Iconmore from '../../Assets/Icons/icon_more_vertical.png';
 export function UserComment({ accountname, username, image, content, uploadDate, postid, commentId, setCommentList }) {
   /* userImg, userNickname, postDate, nowDate, content */
   const [isModal, setIsModal] = useState(false);
-  const [res, setRes] = useState([]);
   const localID = localStorage.getItem('user ID');
 
   const listObj =
@@ -30,17 +29,6 @@ export function UserComment({ accountname, username, image, content, uploadDate,
             },
           },
         ];
-
-  const getFormatDate = date => {
-    const year = date.getFullYear();
-    const month = 1 + date.getMonth();
-    const day = date.getDate();
-
-    return `${year}년 ${month}월 ${day}일 `;
-  };
-
-  const upload = new Date(uploadDate);
-  const date = getFormatDate(upload);
 
   const detailDate = a => {
     const milliSeconds = new Date() - a;

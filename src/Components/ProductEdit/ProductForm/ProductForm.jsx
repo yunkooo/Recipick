@@ -29,7 +29,7 @@ export default function ProductForm({ productDetail }) {
       itemName: inputValue.iptPrdName,
       price: Number(inputValue.iptPrdPrice.replaceAll(',', '')),
       link: inputValue.iptPrdLink,
-      itemImage: `https://mandarin.api.weniv.co.kr/${response[0]}`,
+      itemImage: `https://api.mandarin.weniv.co.kr/${response[0]}`,
     };
 
     if (productDetail) {

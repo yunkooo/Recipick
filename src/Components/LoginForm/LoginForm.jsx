@@ -6,7 +6,7 @@ import { LoginFormWrapper, InpLabel, InpWrapper, Inp, LoginInp, ErrorMessage } f
 import { setCookie } from '../../Cookie/Cookie';
 
 const loginAxios = axios.create({
-  baseURL: 'https://mandarin.api.weniv.co.kr/user',
+  baseURL: 'https://api.mandarin.weniv.co.kr/user',
   headers: { 'Content-type': 'application/json' },
 });
 

@@ -46,7 +46,10 @@ export default function ProductItem({ productData, deleteProductHandler }) {
   return (
     <ProductItemWrapper onClick={onClickHandler}>
       <ImageWrapper>
-        <img src={itemImage} alt={itemName} />
+        <img
+          src={itemImage.includes('mandarin.api') ? itemImage.replace('mandarin.api', 'api.mandarin') : itemImage}
+          alt={itemName}
+        />
       </ImageWrapper>
       <ProductName>{itemName}</ProductName>
       <ProductPrice>{price.toLocaleString()}원</ProductPrice>

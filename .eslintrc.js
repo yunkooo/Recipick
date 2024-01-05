@@ -17,5 +17,6 @@ module.exports = {
     'no-console': 'warn',
     'no-unused-vars': 'warn',
     'object-curly-newline': 1,
+    'react-hooks/exhaustive-deps': 0,
   },
 };

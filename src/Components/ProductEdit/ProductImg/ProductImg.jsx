@@ -7,7 +7,7 @@ export default function ProductImg({ response, stateFunc }) {
     <ProductImgWrapper>
       <Title>이미지 등록</Title>
       <ImgWrapper>
-        {!!response.length && <img src={`https://mandarin.api.weniv.co.kr/${response[0]}`} alt='' />}
+        {!!response.length && <img src={`https://api.mandarin.weniv.co.kr/${response[0]}`} alt='' />}
         <BtnUpload stateFunc={stateFunc} response={response} color='gray' />
       </ImgWrapper>
     </ProductImgWrapper>

@@ -108,7 +108,7 @@ export default function ProfileSet() {
       password: userPassword,
       accountname: userId,
       intro: userIntro,
-      image: response[0] ? `https://mandarin.api.weniv.co.kr/${response[0]}` : '',
+      image: response[0] ? `https://api.mandarin.weniv.co.kr/${response[0]}` : '',
     },
   };
 
@@ -130,7 +130,7 @@ export default function ProfileSet() {
             <ProfileImg
               userName={userName}
               stateFunc={uploadSingleFile}
-              response={response[0] ? [`https://mandarin.api.weniv.co.kr/${response[0]}`] : []}
+              response={response[0] ? [`https://api.mandarin.weniv.co.kr/${response[0]}`] : []}
             />
           </InpImg>
           <InputWrapper>

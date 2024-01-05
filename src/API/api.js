@@ -98,7 +98,7 @@ export const uploadImages = async files => {
     const { data } = await instanceForm.post('/image/uploadfiles', formData);
 
     for (const i of data) {
-      name.push(`https://mandarin.api.weniv.co.kr/${i.filename}`);
+      name.push(`https://api.mandarin.weniv.co.kr/${i.filename}`);
     }
 
     if (name.length > 1) {

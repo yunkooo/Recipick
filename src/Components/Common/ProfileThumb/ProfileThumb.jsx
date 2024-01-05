@@ -3,7 +3,8 @@ import { ProfileThumbWrapper } from './ProfileThumb.style';
 import userDefaultImage from '../../../Assets/Images/img_profile_basic.png';
 
 export default function ProfileThumb({ src, userName, size }) {
-  const [imgSrc, setImgSrc] = useState(src);
+  const image = src.includes('mandarin.api') ? src.replace('mandarin.api', 'api.mandarin') : src;
+  const [imgSrc, setImgSrc] = useState(image);
 
   const handleError = () => {
     setImgSrc(userDefaultImage);

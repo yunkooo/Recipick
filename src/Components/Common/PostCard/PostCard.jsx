@@ -152,11 +152,21 @@ function PostCard({
             (postImg.includes(',') ? (
               <Carousel>
                 {postImg.split(',').map(el => {
-                  return <GetImg key={crypto.randomUUID()} src={el} alt='사용자가 업로드한 이미지' />;
+                  return (
+                    <GetImg
+                      key={crypto.randomUUID()}
+                      src={el.includes('mandarin.api') ? el.replace('mandarin.api', 'api.mandarin') : el}
+                      alt='사용자가 업로드한 이미지'
+                    />
+                  );
                 })}
               </Carousel>
             ) : (
-              <GetImg key={crypto.randomUUID()} src={postImg} alt='사용자가 업로드한 이미지' />
+              <GetImg
+                key={crypto.randomUUID()}
+                src={postImg.includes('mandarin.api') ? postImg.replace('mandarin.api', 'api.mandarin') : postImg}
+                alt='사용자가 업로드한 이미지'
+              />
             ))}
         </PostContentWrapper>
         <ReactionSection postid={postid} commentCount={commentCount} />
