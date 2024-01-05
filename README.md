@@ -2,7 +2,7 @@
 
 **[배포 URL]**
 
-- URL: https://dynamic-gumdrop-83afb6.netlify.app/
+- URL: https://recipick.netlify.app/
 - 계정
   - `ID` : recipick@gmail.com
   - `PassWord` : asdf1234
@@ -348,10 +348,8 @@ ReactDOM.createPortal(child, container)
 
 - 원인 추론
 
-
   - 로그인 페이지에서 이미 api.js 가 로드되어 `getCookie('Token')` 구문이 실행되었음
   - local storage가 비어있는 상태로 api 호출 함수가 실행되고 있는 것으로 보임
-
 
 - 해결 방법
 
